@@ -4,7 +4,7 @@ const settings = {
   authority: "http://localhost:8080/realms/demo",
   client_id: "my-client",
   redirect_uri: "http://localhost:3000/signin-callback.html",
-//   redirect_uri: "http://localhost:3000",
+  post_logout_redirect_uri: "http://localhost:3000/signout-callback.html",
   response_type: 'code',
   scope: "openid profile message.read",
 };
