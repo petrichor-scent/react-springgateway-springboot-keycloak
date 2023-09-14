@@ -15,6 +15,6 @@ spring:
               - POST
       routes:
         - id: resources
-          uri: http://backend-resources:8082
+          uri: http://localhost:8082
           predicates:
             Path=/messages/**
