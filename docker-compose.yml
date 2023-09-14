@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  resource-server:  # port 8082:8082
+    image: backend-resources:0.0.4-SNAPSHOT  # built from backend-resources
+    container_name: resource-server
+    network_mode: "host"
+
+  api-gateway:  # port 8083:8083
+    image: backend-gateway-client:0.0.4-SNAPSHOT  # built from backend-gateway-client
+    container_name: api-gateway
+    network_mode: "host"
+
+  frontend:
+    image: nginx:alpine
+    container_name: frontend
+    ports:
+      - "3000:80"
+    volumes:
+      - ./frontend-react/build:/usr/share/nginx/html
+
+  identity-broker:  # port 8080:8080
+    image: quay.io/keycloak/keycloak:22.0.1
+    container_name: identity-broker
+    network_mode: 'host'
+    command: ["-v start-dev", "--import-realm"]
+    volumes:
+      - ./keycloak-configs/identity-broker:/opt/keycloak/data/import
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+
+  identity-provider:  # port 9090:9090
+    image: quay.io/keycloak/keycloak:22.0.1
+    container_name: identity-provider
+    network_mode: 'host'
+    command: ["-v start-dev", "--import-realm", "--http-port=9090"]
+    volumes:
+      - ./keycloak-configs/identity-provider:/opt/keycloak/data/import
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
