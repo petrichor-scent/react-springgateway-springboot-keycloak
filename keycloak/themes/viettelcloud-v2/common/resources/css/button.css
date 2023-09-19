@@ -1,0 +1,189 @@
+.auth-button {
+    width: 440px;
+    padding: 8px 20px !important;
+    margin-bottom: 20px;
+
+    border: 1px solid var(--brand);
+    border-radius: 100px;
+
+    font-style: normal;
+    font-size: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .auth-button {
+        width: var(--form-width-600) !important;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .auth-button {
+        width: var(--form-width-450) !important;
+    }
+}
+
+.account-button {
+    width: 100px;
+    height: 36px;
+    padding: 8px 16px !important;
+    margin-bottom: 0 !important;
+
+    border: 1px solid var(--brand);
+    border-radius: 4px;
+
+    font-style: normal;
+    font-size: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .account-button {
+        width: 150px !important;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .account-button {
+        width: 100px !important;
+    }
+}
+
+.auth-button:disabled, .account-button:disabled {
+    cursor: auto;
+    border-color: var(--brand-disable-border) !important;
+    color: var(--brand-disable-border) !important;
+}
+
+.primary-button {
+    background: var(--brand);
+    color: #FFFFFF;
+    animation: primary-revert-color .5s cubic-bezier(.645,.045,.355,1) forwards;
+}
+@keyframes primary-revert-color {
+    to {
+        background: var(--brand);
+        border-color: var(--brand);
+    }
+}
+.primary-button:hover, .primary-button:active, .primary-button:focus  {
+    outline: none !important;
+    animation: primary-change-color .5s cubic-bezier(.645,.045,.355,1) forwards;
+}
+@keyframes primary-change-color {
+    to {
+        background: var(--brand-action);
+        border-color: var(--white);
+    }
+}
+
+.secondary-button {
+    background: #FFFFFF;
+    color: var(--brand);
+    border-color: var(--brand);
+    margin-bottom: 24px;
+    animation: secondary-revert-color .5s cubic-bezier(.645,.045,.355,1) forwards;
+}
+@keyframes secondary-revert-color {
+    to {
+        color: var(--brand);
+        border-color: var(--brand);
+    }
+}
+.secondary-button:hover, .secondary-button:active, .secondary-button:focus  {
+    outline: none !important;
+    animation: secondary-change-color .5s cubic-bezier(.645,.045,.355,1) forwards;
+}
+@keyframes secondary-change-color {
+    to {
+        color: var(--brand-action);
+        border-color: var(--brand-action);
+    }
+}
+
+.account-button.primary-button {
+    animation: account-primary-revert-color .5s cubic-bezier(.645,.045,.355,1) forwards;
+}
+@keyframes account-primary-revert-color {
+    to {
+        background: var(--brand);
+        border-color: var(--brand);
+    }
+}
+.account-button.primary-button:hover, .account-button.primary-button:active  {
+    animation: account-primary-change-color .5s cubic-bezier(.645,.045,.355,1) forwards;
+}
+@keyframes account-primary-change-color {
+    to {
+        background: var(--brand-action);
+        border-color: var(--brand-action);
+    }
+}
+.account-button.primary-button:focus {
+    animation: account-primary-focus .5s cubic-bezier(.645,.045,.355,1) forwards;
+}
+@keyframes account-primary-focus {
+    to {
+        background: #F92445;
+    }
+}
+.account-button.secondary-button {
+    border: 1px solid var(--brand-disable-border);
+    color: #575864;
+    animation: account-scondary-revert-color .5s cubic-bezier(.645,.045,.355,1) forwards !important;
+}
+@keyframes account-secondary-revert-color {
+    to {
+        border-color: var(--brand-disable-border);
+        color: #575864;
+    }
+}
+.account-button.secondary-button:hover, .account-button.secondary-button:focus, .account-button.secondary-button:active {
+    border-color: var(--brand);
+    color: var(--brand);
+    animation: account-secondary-change-color .5s cubic-bezier(.645,.045,.355,1) forwards !important;
+}
+@keyframes account-secondary-change-color {
+    to {
+        border-color: var(--brand);
+        color: var(--brand);
+    }
+}
+
+.text-button {
+    border: none;
+    background: #FFFFFF;
+    color: var(--brand);
+}
+.text-button:hover, .text-button:active, .text-button:focus  {
+    color: var(--brand-action);
+}
+.text-button:disabled {
+    color: var(--subtext);
+}
+
+.clear-container {
+    width: 100%;
+    position: relative;
+}
+.clear-button {
+    border: none;
+    box-shadow: none;
+    background: url(../img/close.svg) no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 12px;
+    margin: auto 0;
+    height: 15px;
+    width: 15px;
+    font-size: 15px;
+    padding: 5px;
+}

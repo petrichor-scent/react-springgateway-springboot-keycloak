@@ -1,0 +1,10 @@
+.logo-container {
+    text-align: center;
+    margin-top: 32px;
+}
+
+@media only screen and (max-width: 900px) {
+    .logo-container {
+        margin-top: 16px;
+    }
+}

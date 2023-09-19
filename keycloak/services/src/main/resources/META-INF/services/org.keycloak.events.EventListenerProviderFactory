@@ -1,0 +1,2 @@
+org.viettelcloud.events.custom.CustomEventListenerProviderFactory
+org.viettelcloud.events.kafka.KafkaEventListenerProviderFactory

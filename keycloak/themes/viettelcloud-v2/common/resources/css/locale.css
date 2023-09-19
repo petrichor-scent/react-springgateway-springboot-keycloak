@@ -1,0 +1,36 @@
+.outer-locale {
+    width: 100%;
+    position: absolute;
+    top: 24px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+}
+
+.inner-locale {
+    display: none;
+}
+
+@media only screen and (max-width: 900px) {
+    .outer-locale {
+        display: none;
+    }
+
+    .inner-locale {
+        display: flex;
+        justify-content: right;
+        width:  var(--form-width-900) !important;
+        margin-top: 32px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .inner-locale {
+        width:  var(--form-width-600) !important;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .inner-locale {
+        width:  var(--form-width-450) !important;
+    }
+}

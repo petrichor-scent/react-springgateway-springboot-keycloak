@@ -1,0 +1,24 @@
+/*Internet Explorer 11 compatibility workaround - IE does not support CSS variables */
+:root {
+    --brand: #EE0033;
+    --brand-action: #DB002F;
+    --brand-disable: #D9DBE9;
+    --brand-disable-border: #D9DBE9;
+
+    --maintext: #14142B;
+    --subtext: #6E7191;
+    --placeholder: #A0A3BD;
+    --disable-divider: #E1E2EA;
+    --background: #F7F7FC;
+    --background-highlight-shadow: #6E717333;
+    --white: #FFFFFF;
+    --black: #000000;
+    --disabled: #EAEBF2;
+
+    --default-border: #959595;
+    --label: #000000D9; 
+
+    --form-width-900: 440px;
+    --form-width-600: 400px;
+    --form-width-450: 320px;
+}

@@ -1,0 +1,169 @@
+:root {
+    --primary-normal: #EE0033;
+    --primary-dark: rgba(238, 0, 51, 0.2);
+    --gray-light: #F2F2F2;
+    --gray-middle: #B5B5B5;
+    --gray-heavy: #44494D;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body.hide {
+    display: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 100px !important;
+    border: none;
+    box-shadow: none;
+    background: none;
+}
+
+.logo-group {
+    display: flex;
+    align-self: flex-start;
+    gap: 8px;
+}
+
+#logo-red {
+    width: 168px;
+    height: 21px;
+
+    background-image: url(../img/logo-red.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1#page-title {
+    font-family: 'Lexend Deca', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+
+    color: var(--gray-heavy);
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+p#page-subtitle {
+    font-family: 'Lexend Deca', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+
+    text-align: center;
+
+    color: var(--gray-middle);
+
+    margin-bottom: 24px;
+}
+
+p#page-subtitle-internal {
+    font-family: 'Lexend Deca', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+
+    color: #000000;
+
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+
+#kc-locale {
+    display: flex;
+    justify-content: flex-start;
+    justify-self: flex-start;
+    cursor: pointer;
+}
+
+p.locale {
+    color: #000000;
+}
+
+i.locale {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25px;
+    height: 16px;
+    border-radius: 2px;
+
+    position: relative;
+    left: -30px;
+    top: -5px;
+    margin-right: -25px;
+}
+
+.locale-VI {
+    background-image: url(../locale/vi.svg);
+}
+
+.locale-EN {
+    background-image: url(../locale/en.svg);
+}
+
+.auth-button {
+    width: 364px;
+    height: 45px;
+
+    border-radius: 8px;
+    border: none;
+
+    font-family: 'Sarabun', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.primary-button {
+    margin-bottom: 16px;
+
+    background: var(--primary-normal);
+    color: #FFFFFF;
+}
+
+.secondary-button {
+    margin-bottom: 40px;
+
+    border: 1px solid #E4E4E7;
+    border-radius: 8px;
+
+    background: #FFFFFF;
+    color: var(--gray-heavy);
+}
+
+.bottom-banner {
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.bottom-banner-red {
+    background: url("../img/bottom-banner-red.png") no-repeat bottom center;
+    background-size: contain;
+}
+
+.bottom-banner-gray {
+    background: url("../img/bottom-banner-gray.png") no-repeat bottom center;
+    background-size: contain;
+}

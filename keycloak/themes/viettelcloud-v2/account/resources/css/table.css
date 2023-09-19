@@ -1,0 +1,40 @@
+thead > tr:first-child > td:first-child { border-top-left-radius: 12px; }
+thead > tr:first-child > td:last-child { border-top-right-radius: 12px; }
+
+thead > tr:last-child > td:first-child { border-bottom-left-radius: 12px; }
+thead > tr:last-child > td:last-child { border-bottom-right-radius: 12px; }
+
+tr:nth-child(even) {
+    background: #F0F3F5;
+}
+
+.custom-table > thead {
+    border-radius: 12px;
+    background: #E6F3FF;
+    color: #6E7173;
+
+    font-family: 'Sarabun', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+}
+.custom-table td {
+    border-top: none !important;
+    border-bottom: 1px solid #EAEBF2 !important;
+}
+.custom-table thead td {
+    border: none !important;
+}
+.custom-table td, .custom-table th {
+    height: 48px;
+    font-family: 'Sarabun', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+
+    text-align: center;
+    vertical-align: middle !important;
+}
+.custom-table tr > td:first-child {
+    text-align: left;
+}

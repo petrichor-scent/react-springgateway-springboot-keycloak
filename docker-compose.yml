@@ -26,6 +26,7 @@ services:
     command: ["-v start-dev", "--import-realm"]
     volumes:
       - ./backend-keycloak-auth/identity-broker:/opt/keycloak/data/import
+      - ./keycloak/themes:/opt/keycloak/themes
     environment:
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin

@@ -1,0 +1,86 @@
+.form-group {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+    width: 100%;
+}
+
+.form-group .form-label {
+    font-family: 'Sarabun', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--label);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 8px 0 4px;
+}
+
+.form-group input.form-input {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 14px !important;
+    gap: 8px;
+    width: 100%;
+    background: var(--white);
+    border: none;
+    border-radius: 12px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    margin-bottom: 8px;
+    box-shadow: 0 0 0 1px var(--default-border);
+    color: var(--black);
+}
+.form-group span.form-input-wrong {
+    color: var(--brand);
+}
+.form-group input.form-input:disabled,  .form-group input.form-input:disabled:hover {
+    background: var(--disabled) !important;
+    border: none;
+    cursor: not-allowed;
+}
+
+@keyframes input-action {
+    from {
+        background: var(--background);
+    }
+    to {
+        background: #FFFFFF;
+        box-shadow:0 0 0 1px var(--black);
+    }
+}
+
+.form-group input.form-input:hover,
+.form-group input.form-input:focus,
+.form-group input.form-input:active {
+    outline: none !important;
+    background: #FFFFFF;
+    animation: 0.25s input-action forwards;
+}
+.form-group input.form-input[aria-invalid="true"] {
+    box-shadow: 0 0 0 2px var(--brand);
+}
+
+.red-asterisk {
+    color: var(--brand);
+}
+
+.horizontal-form {
+    margin: 0;
+    gap: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+@media only screen and (max-width: 750px) {
+    .horizontal-form {
+        flex-direction: column;
+        gap: 0;
+    }
+}

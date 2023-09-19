@@ -1,0 +1,32 @@
+.tooltip-password {
+    position: absolute !important;
+    top: 72px;
+    right: 12px;
+    display: none;
+}
+
+.tooltip-arrow {
+    position: absolute !important;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent !important;
+    border-right: 8px solid transparent !important;
+    border-bottom: 16px solid var(--pf-c-tooltip__content--BackgroundColor) !important;
+    border-top: 0 !important;
+    background: none !important;
+    top: -8px;
+    right: 0;
+    pointer-events: none;
+}
+
+.tooltip-content {
+    border-radius: 6px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .tooltip-password, .tooltip-arrow, .tooltip-content {
+        display: none;
+        visibility: hidden;
+    }
+}

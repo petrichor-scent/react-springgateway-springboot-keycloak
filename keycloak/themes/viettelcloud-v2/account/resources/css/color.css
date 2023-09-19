@@ -1,0 +1,6 @@
+/*Internet Explorer 11 compatibility workaround - IE does not support CSS variables */
+:root {
+    --form-border: #d9d9d9;
+    --sidebar-background: #001529;
+    --sidebar-bottom-color: #7e7e85;
+}
