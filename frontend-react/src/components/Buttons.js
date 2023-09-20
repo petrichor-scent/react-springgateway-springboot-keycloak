@@ -8,7 +8,7 @@ const Buttons: React.SFC = props => {
           Login
         </button>
         <button className="btn btn-warning" style={{ margin: '10px' }} onClick={props.callApi}>
-          Call Backend
+          Call Private Resource
         </button>
         <button className="btn btn-dark" style={{ margin: '10px' }} onClick={props.logout}>
           Logout
